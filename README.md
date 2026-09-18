@@ -1,9 +1,13 @@
 # expediente-arq-geronimoo
+# Módulo de Créditos - Arquitectura de Software y Patrones de Diseño
 
-Módulo de Créditos - Arquitectura de Software y Patrones de Diseño
-Este repositorio contiene la implementación práctica, refactorización orientada a principios SOLID (LSP, ISP) y la fusión de patrones avanzados (Strategy + Observer) aplicada al dominio financiero de Créditos (Cuota, Vendedor, AgenteCobranza, Gerente).
+Este repositorio contiene la implementación práctica, refactorización orientada a principios **SOLID** (`LSP`, `ISP`) y la fusión de patrones avanzados (**Strategy** + **Observer**) aplicada al dominio financiero de **Créditos** (`Cuota`, `Vendedor`, `AgenteCobranza`, `Gerente`).
 
-Estructura del Repositorio
+---
+
+# Estructura del Repositorio
+
+```text
 /
 ├── lsp/
 │   ├── antes.cs             # Violación de LSP (CuotaCondonada lanza NotSupportedException)
@@ -15,7 +19,9 @@ Estructura del Repositorio
 │   └── fusion.cs            # Fusión de Patrones: Strategy + Observer
 └── docs/
     └── adr-001.md           # Architecture Decision Record de la fusión
+```
 
+---
 
 ## Principios y Patrones Aplicados
 
@@ -25,9 +31,9 @@ Estructura del Repositorio
    * **Strategy:** Permite intercambiar dinámicamente las reglas y algoritmos de cálculo de mora.
    * **Observer:** Permite notificar de forma reactiva y desacoplada a los observadores (ej. `AgenteCobranzaNotificador`) cuando una cuota vence.
 
+---
 
-
-## Diagrama Arquitectónico (C4 / Mermaid)
+##  Diagrama Arquitectónico (C4 / Mermaid)
 
 ```mermaid
 graph TD
@@ -43,12 +49,15 @@ graph TD
     ConcreteStrategy -.->|Implementa| Strategy
     Cuota -->|Notifica eventos| Observer
     ConcreteObserver -.->|Implementa| Observer
+```
 
+---
 
-## ADR (Architecture Decision Record)
+##  ADR (Architecture Decision Record)
 
 ### ADR-001: Fusión de Strategy y Observer en el Subsistema de Créditos
 * **Estado:** Aceptado
 * **Contexto:** Se requiere flexibilidad para cambiar algoritmos de mora dinámicamente y notificar de manera reactiva a los roles de la financiera ante vencimientos.
 * **Decisión:** Implementar la combinación de *Strategy* para los cálculos y *Observer* para la gestión de eventos de cuotas vencidas.
 * **Consecuencias:** Mayor extensibilidad, código limpio y desacoplado, con un incremento controlado en la complejidad estructural inicial.
+
