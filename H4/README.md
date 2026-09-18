@@ -2,7 +2,7 @@
 
 Este repositorio contiene la implementación práctica, refactorización orientada a principios **SOLID** (`LSP`, `ISP`) y la fusión de patrones avanzados (**Strategy** + **Observer**) aplicada al dominio financiero de **Créditos** (`Cuota`, `Vendedor`, `AgenteCobranza`, `Gerente`).
 
----
+
 
 # Estructura del Repositorio
 
@@ -18,9 +18,7 @@ Este repositorio contiene la implementación práctica, refactorización orienta
 │   └── fusion.cs            # Fusión de Patrones: Strategy + Observer
 └── docs/
     └── adr-001.md           # Architecture Decision Record de la fusión
-```
 
----
 
 ## Principios y Patrones Aplicados
 
@@ -30,7 +28,7 @@ Este repositorio contiene la implementación práctica, refactorización orienta
    * **Strategy:** Permite intercambiar dinámicamente las reglas y algoritmos de cálculo de mora.
    * **Observer:** Permite notificar de forma reactiva y desacoplada a los observadores (ej. `AgenteCobranzaNotificador`) cuando una cuota vence.
 
----
+
 
 ## Diagrama Arquitectónico (C4 / Mermaid)
 
@@ -48,9 +46,7 @@ graph TD
     ConcreteStrategy -.->|Implementa| Strategy
     Cuota -->|Notifica eventos| Observer
     ConcreteObserver -.->|Implementa| Observer
-```
 
----
 
 ## ADR (Architecture Decision Record)
 
