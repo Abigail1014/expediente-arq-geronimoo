@@ -4,7 +4,7 @@ Este repositorio contiene la implementación práctica, refactorización orienta
 
 ---
 
-## 📂 Estructura del Repositorio
+# Estructura del Repositorio
 
 ```text
 /
@@ -22,7 +22,7 @@ Este repositorio contiene la implementación práctica, refactorización orienta
 
 ---
 
-## 🛠️ Principios y Patrones Aplicados
+## Principios y Patrones Aplicados
 
 1. **LSP (Liskov Substitution Principle):** Se asegura que las clases hijas cumplan estrictamente los contratos del padre sin romper expectativas mediante excepciones.
 2. **ISP (Interface Segregation Principle):** Se evita que los roles (como el `Vendedor` o `AgenteCobranza`) implementen métodos que no les corresponden.
@@ -32,7 +32,7 @@ Este repositorio contiene la implementación práctica, refactorización orienta
 
 ---
 
-## 📐 Diagrama Arquitectónico (C4 / Mermaid)
+## Diagrama Arquitectónico (C4 / Mermaid)
 
 ```mermaid
 graph TD
@@ -52,7 +52,7 @@ graph TD
 
 ---
 
-## 📄 ADR (Architecture Decision Record)
+## ADR (Architecture Decision Record)
 
 ### ADR-001: Fusión de Strategy y Observer en el Subsistema de Créditos
 * **Estado:** Aceptado
